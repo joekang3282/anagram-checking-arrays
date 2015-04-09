@@ -1,24 +1,24 @@
 // Compares and determine for each pair if it’s an anagram or not
 
-firstWords = ['grints', 'aba', 'cinema', 'host', 'train'];
-secondWords = ['string', 'abb', 'iceman', 'shot', 'rain'];
-for (i=0; i<firstWords.length; i++){
-    for (j=0; j<secondWords.length; j++) {
+firstWordsArray = ['grints', 'aba', 'cinema', 'host', 'train'];
+secondWordsArray = ['string', 'abb', 'iceman', 'shot', 'rain'];
+for (i=0; i<firstWordsArray.length; i++){
+    for (j=0; j<secondWordsArray.length; j++) {
         if (i === j) {
             // console.log(i + " " + j);
-            checkAnagrams(firstWords[i],secondWords[j]);
+            checkAnagrams(firstWordsArray[i],secondWordsArray[j]);
         }
     }
 }
 
-function checkAnagrams(first_words, second_words) {
-    analyzeFirstArray = first_words.split("").sort().join("");
-    analyzeSecondArray = second_words.split("").sort().join("");
+function checkAnagrams(firstWords, secondWords) {
+    analyzeFirstArray = firstWords.split("").sort().join("");
+    analyzeSecondArray = secondWords.split("").sort().join("");
    
         if (analyzeFirstArray === analyzeSecondArray) {
-            console.log(firstWords[i] + " and " + secondWords[j] + " are anagrams");
+            console.log(firstWordsArray[i] + " and " + secondWordsArray[j] + " are anagrams");
         }
         else {
-            console.log(firstWords[i] + " and " + secondWords[j] + " are NOT anagrams");
+            console.log(firstWordsArray[i] + " and " + secondWordsArray[j] + " are NOT anagrams");
         }
 }
